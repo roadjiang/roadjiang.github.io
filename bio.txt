@@ -1,8 +1,7 @@
 Lu Jiang is a staff research scientist and manager at Google, as well as an adjunct faculty member at the Language Technologies Institute of Carnegie Mellon University. 
-His research interests lie in the interdisciplinary field of Multimedia and Machine Learning, with a focus on robust deep learning, generative AI, video creation, multimodal foundation model. 
-His research has been integral in the development of multiple Google products, such as YouTube, Cloud AutoML, Ads, Waymo, and Translate,  impacting the daily lives of billions of users worldwide. 
-He was the founding member and first research scientist hire of Google Cloud AI, an initiative established by Dr. Fei-Fei Li in 2017. 
+His research interests lie in the interdisciplinary field of Multimedia and Machine Learning, with a focus on robust deep learning, generative AI, video creation, multimodal foundation model.
 His work has been nominated for the best paper at the top conferences in natural language processing (ACL) and Computer Vision (CVPR).
+His research has been integral in the development of multiple Google products, such as YouTube, Cloud, Cloud AutoML, Ads, Waymo, and Translate, impacting the daily lives of billions of users worldwide. 
 
-Lu Jiang is an active member of the research community, serving as an AI panelist for America's Seed Fund (NSF SBIR), 
-He regularly acts as an area chair for conferences like CVPR, ICCV, NeurIPS, ACM Multimedia, and AAAI, associate editor for CVIU and IEEE TCSVT.
+Lu is an active member of the research community, serving as an AI panelist for America's Seed Fund (NSF SBIR).
+He regularly acts as an area chair for conferences like CVPR, ICCV, ICML, NeurIPS, ACM Multimedia, and AAAI, associate editor for CVIU and IEEE TCSVT.

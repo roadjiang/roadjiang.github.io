@@ -8,6 +8,7 @@
       <title>Lu Jiang</title>
       <link href="defaultstyles_home.css" rel="stylesheet" media="screen" />
       <script type="text/JavaScript" src="js/curvycorners.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
    </head>
    <body>
       <div id="container">
@@ -32,120 +33,168 @@
             <div id="content">
                <div style="text-indent: 0em; padding-left: 2em;">
                   <div>
-                     <hr/>
-                     <h2>Full publication list: <a href="https://scholar.google.com/citations?user=jIKjjSYAAAAJ"> Google Scholar</a> or <a href="publications2.html">page</a></h2>
-                     Research areas: <font class="tag-vl">Generative AI</font> - <font class="tag-learning">Robust and Trustworthy Deep Learning</font> - <font class="tag-video">Video or Multimodal Understanding</font> - <font class="tag-curriculum">Curriculum Learning</font><p/>
-                     <hr/>
+                      <hr/>
+                      <h2>Selected Publication List <span class="smaller-title">See full list in <a href="https://scholar.google.com/citations?user=jIKjjSYAAAAJ">Google Scholar</p></a></h2>
+                      Research areas: <font class="tag-vl">Generative AI</font> - <font class="tag-learning">Robust and Trustworthy Deep Learning</font> - <font class="tag-video">Video or Multimodal Understanding</font> - <font class="tag-curriculum">Curriculum Learning</font><p/>
+                      <hr/>
                      <h3><font class="tag-vl">Generative AI</font><br/></h3>
                      <hr/>
+                     <div class="diagram-title">An Overview of Lu's Research on <strong>Image and Video Generation using Transformer</strong>.</div>
+
+                     <div class="mermaid">
+                     graph LR;
+                         BLT[<b>BLT</b><br>ECCV'22] --> |image| MaskGIT[<b>MaskGIT</b><br>CVPR'22]
+                         MaskGIT[<b>MaskGIT</b><br>CVPR'22] --> |text-to-image | MUSE[<b>MUSE</b><br>ICML'23]
+                         MaskGIT[<b>MaskGIT</b><br>CVPR'22] --> |video| MAGVIT[<b>MAGVIT</b><br>CVPR'23]
+                         MUSE[<b>MUSE</b><br>ICML'23] --> StyleDrop[<b>StyleDrop</b><br>NeurIPS'23]
+                         MAGVIT[<b>MAGVIT</b><br>CVPR'23] --> MAGVITv2[<b>MAGVIT-v2</b><br>ICLR'24]
+                         MAGVIT[<b>MAGVIT</b><br>CVPR'23] --> |+semantics| SPAE[<b>SPAE</b><br>NeurIPS'23]
+                         MAGVITv2[<b>MAGVIT-v2</b><br>ICLR'24] --> |LLM| VideoPoet[<b>VideoPoet</b>]
+                         MAGVITv2[<b>MAGVIT-v2</b><br>ICLR'24] --> |Diffusion| WALT[<b>WALT</b>]
+                     
+                     
+                         click BLT "https://arxiv.org/abs/2112.05112"
+                         click MaskGIT "https://arxiv.org/abs/2202.04200"
+                         click MUSE "https://muse-model.github.io/"
+                         click MAGVIT "https://magvit.cs.cmu.edu/"
+                         click MAGVITv2 "https://magvit.cs.cmu.edu/v2/"
+                         click SPAE "https://arxiv.org/abs/2306.17842"
+                         click VideoPoet "https://sites.research.google/videopoet/"
+                         click StyleDrop "https://styledrop.github.io/"
+                         click WALT "https://walt-video-diffusion.github.io/"
+                     </div>
+                     
+                     <script>mermaid.initialize({startOnLoad:true});</script>
                      <ul>
                         <li>
-                           <b>MAGVIT: Masked Generative Video Transformer</b><br/>
+                           <b>VideoPoet: A Large Language Model for Zero-Shot Video Generation</b><br/>
+                           <div class="smaller-author">Dan Kondratyuk, Lijun Yu, Xiuye Gu, José Lezama, Jonathan Huang, Rachel Hornung, Hartwig Adam, Hassan Akbari, Yair Alon, Vighnesh Birodkar, Yong Cheng, Ming-Chang Chiu, Josh Dillon, Irfan Essa, Agrim Gupta, Meera Hahn, Anja Hauth, David Hendon, Alonso Martinez, David Minnen, David Ross, Grant Schindler, Mikhail Sirotenko, Kihyuk Sohn, Krishna Somandepalli, Huisheng Wang, Jimmy Yan, Ming-Hsuan Yang, Xuan Yang, Bryan Seybold, Lu Jiang</div>
+                           preprint 2023
+                           [<a href="https://arxiv.org/abs/2312.14125">pdf</a>], [<a href="https://sites.research.google/videopoet/">project page</a>], 
+                           <br/><p/>
+                        </li>
+                        <li>
+                           <b>Photorealistic Video Generation with Diffusion Models</b><br/>
+                           Agrim Gupta, Lijun Yu, Kihyuk Sohn, Xiuye Gu, Meera Hahn, Li Fei-Fei, Irfan Essa, Lu Jiang, José Lezama<br/>
+                           preprint 2023
+                           [<a href="https://arxiv.org/abs/2312.06662">pdf</a>], [<a href="https://walt-video-diffusion.github.io/">project page</a> known as <strong>WALT</strong>], 
+                           <br/><p/>
+                        </li>
+                        <li>
+                           <b>Language Model Beats Diffusion -- Tokenizer is Key to Visual Generation</b><br/>
+                           Lijun Yu, José Lezama, Nitesh B. Gundavarapu, Luca Versari, Kihyuk Sohn, David Minnen, Yong Cheng, Agrim Gupta, Xiuye Gu, Alexander G. Hauptmann, Boqing Gong, Ming-Hsuan Yang, Irfan Essa, David A. Ross, Lu Jiang<br/>
+                           ICLR 2024
+                           [<a href="https://arxiv.org/abs/2310.05737">pdf</a>], [<a href="https://magvit.cs.cmu.edu/v2/">project page</a> known as <strong>MAGVIT-v2</strong>], 
+                           <br/><p/>
+                        </li>
+                        <li>
+                           <b>SPAE: Semantic Pyramid AutoEncoder for Multimodal Generation with Frozen LLMs</b> <font class="hl">[Spotlight]</font><br/>
+                           Lijun Yu, Yong Cheng, Zhiruo Wang, Vivek Kumar, Wolfgang Macherey, Yanping Huang, David A. Ross, Irfan Essa, Yonatan Bisk, Ming-Hsuan Yang, Kevin Murphy, Alexander G. Hauptmann, Lu Jiang<br/>
+                           NeurIPS 2023
+                           [<a href="https://arxiv.org/abs/2306.17842">pdf</a>], [<a href="https://github.com/google-research/magvit">code</a> (coming)],
+                           <br/><p/>
+                         </li>
+                        <li>
+                           <b>StyleDrop: Text-to-Image Generation in Any Style</b><br/>
+                           Kihyuk Sohn, Nataniel Ruiz, Kimin Lee, Daniel Castro Chin, Irina Blok, Huiwen Chang, Jarred Barber, Lu Jiang, Glenn Entis, Yuanzhen Li, Yuan Hao, Irfan Essa, Michael Rubinstein, Dilip Krishnan<br/>
+                           NeurIPS 2023
+                           [<a href="https://arxiv.org/abs/2306.00983">pdf</a>], [<a href="https://styledrop.github.io/">project page</a>],
+                           <br/><p/>
+                         </li>
+                        <li>
+                           <b>MAGVIT: Masked Generative Video Transformer</b> <font class="hl">[Highlight]</font><br/>
                            Lijun Yu, Yong Cheng, Kihyuk Sohn, José Lezama, Han Zhang, Huiwen Chang, Alexander G Hauptmann, Ming-Hsuan Yang, Yuan Hao, Irfan Essa, Lu Jiang<br/>
                            CVPR 2023
-                           [<a href="https://magvit.cs.cmu.edu/">project page</a>], [<a href="https://github.com/MAGVIT/magvit">code</a>]
-                           <br/>
-                           <p/>
+                           [<a href="https://arxiv.org/abs/2212.05199">pdf</a>], [<a href="https://magvit.cs.cmu.edu/">code</a>], 
+                           <br/><p/>
                         </li>
                         <li>
                           <b>Muse: Text-To-Image Generation via Masked Generative Transformers</b><br/>
                            Huiwen Chang, Han Zhang, Jarred Barber, AJ Maschinot, Jose Lezama, Lu Jiang, Ming-Hsuan Yang, Kevin Murphy, William T Freeman, Michael Rubinstein, Yuanzhen Li, Dilip Krishnan<br/>
-                           arXiv preprint arXiv:2301.00704
-                           [<a href="https://arxiv.org/abs/2301.00704">pdf</a>], [<a href="https://muse-model.github.io/">code</a>]
-                           <br/>
-                           <p/>
+                           ICML 2023
+                           [<a href="https://arxiv.org/abs/2301.00704">pdf</a>], [<a href="https://muse-model.github.io/">project page</a>],
+                           <br/><p/>
                         </li>
                         <li>
                           <b>MaskGIT: Masked Generative Image Transformer</b><br/>
                            Huiwen Chang, Han Zhang, Lu Jiang, Ce Liu, William T. Freeman<br/>
                            CVPR 2022
                            [<a href="https://arxiv.org/abs/2202.04200">pdf</a>], [<a href="https://github.com/google-research/maskgit">code</a>]
-                           <br/>
-                           <p/>
+                           <br/><p/>
                         </li>
                         <li>
                           <b>Visual Prompt Tuning for Generative Transfer Learning</b></font><br/>
                            Kihyuk Sohn, Huiwen Chang, José Lezama, Luisa Polania, , Han Zhang, Yuan Hao, Irfan Essa, Lu Jiang<br/>
                            CVPR 2023
                            [<a href="https://arxiv.org/abs/2210.00990">pdf</a>], [<a href="https://github.com/google-research/generative_transfer">code</a>]
-                           <br/>
-                           <p/>
+                           <br/><p/>
                         </li>
+                  
                         <li>
                           <b>Auditing Gender Presentation Differences in Text-to-Image Models</b><br/>
                            Yanzhe Zhang, Lu Jiang, Greg Turk, Diyi Yang<br/>
                            arXiv preprint arXiv:2302.03675
                            [<a href="https://arxiv.org/abs/2302.03675">pdf</a>], [<a href="https://salt-nlp.github.io/GEP/">code</a>]
-                           <br/>
-                           <p/>
+                           <br/><p/>
                         </li>
                         <li>
                           <b>ViTGAN: Training gans with vision transformers</b> <font class="hl">[Spotlight]</font><br/>
                            Kwonjoon Lee, Huiwen Chang, Lu Jiang, Han Zhang, Zhuowen Tu, Ce Liu<br/>
                            ICLR 2022
                            [<a href="https://arxiv.org/abs/2107.04589">pdf</a>], [<a href="https://github.com/mlpc-ucsd/ViTGAN">code</a>]
-                           <br/>
-                           <p/>
+                           <br/><p/>
                         </li>
                         <li>
                           <b>Discrete Predictor-Corrector Diffusion Models for Image Synthesis</b><br/>
                            Jose Lezama, Tim Salimans, Lu Jiang, Huiwen Chang, Jonathan Ho, Irfan Essa<br/>
                            ICLR 2023
-                           [<a href="https://openreview.net/forum?id=VM8batVBWvg">pdf</a>], [<a href="">code coming soon</a>]
-                           <br/>
-                           <p/>
+                           [<a href="https://openreview.net/forum?id=VM8batVBWvg">pdf</a>]
+                           <br/><p/>
                         </li>
                         <li>
                           <b>Improved Masked Image Generation with Token-Critic</b><br/>
                            Jose Lezama, Huiwen Chang, Lu Jiang, Irfan Essa<br/>
                            ECCV 2022
-                           [<a href="https://arxiv.org/abs/2209.04439">pdf</a>], [<a href="https://github.com/google-research/maskgit">code</a>]
-                           <br/>
-                           <p/>
+                           [<a href="https://arxiv.org/abs/2209.04439">pdf</a>], [<a href="https://github.com/google-research/maskgit">project page</a>]
+                           <br/><p/>
                         </li>
                         <li>
                           <b>Regularizing Generative Adversarial Networks under Limited Data</b><br/>
                            Hung-Yu Tseng, Lu Jiang, Ce Liu, Ming-Hsuan Yang, Weilong Yang<br/>
                            CVPR 2021
                            [<a href="https://arxiv.org/abs/2104.03310">pdf</a>], [<a href="https://github.com/google/lecam-gan">code</a>]
-                           <br/>
-                           <p/>
+                           <br/><p/>
                         </li>
                         <li>
                           <b>Text as Neural Operator: Image Manipulation by Text Instruction</b><br/>
                            Tianhao Zhang, Hung-Yu Tseng, Lu Jiang, Weilong Yang, Honglak Lee, Irfan Essa<br/>
                            ACM Multimedia 2021
                            [<a href="https://arxiv.org/abs/2008.04556">pdf</a>], [<a href="https://github.com/google/tim-gan">code</a>], [<a href="https://patents.google.com/patent/US20210383584A1/en">patent</a>]
-                           <br/>
-                           <p/>
+                           <br/><p/>
                         </li>
                         <li>
                           <b>RetrieveGAN: Image Synthesis via Differentiable Patch Retrieval</b></font><br/>
                            Hung-Yu Tseng*, Hsin-Ying Lee*, Lu Jiang, Ming-Hsuan Yang, Weilong Yang<br/>
                            ECCV 2020 (*equal contribution)
                            [<a href="https://arxiv.org/abs/2007.08513">pdf</a>]
-                           <br/>
-                           <p/>
+                           <br/><p/>
                         </li>
+                        <li>
+                           <b>BLT: Bidirectional Layout Transformer for Controllable Layout Generation</b><br/>
+                            Xiang Kong, Lu Jiang, Huiwen Chang, Han Zhang, Yuan Hao, Haifeng Gong, Irfan Essa<br/>
+                            ECCV 2022
+                            [<a href="https://arxiv.org/abs/2112.05112">pdf</a>], [<a href="https://github.com/google-research/google-research/tree/master/layout-blt">code</a>]
+                            <br/><p/>
+                         </li>
                         <li>
                           <b>Neural Design Network: Graphic Layout Generation with Constraints</b> <font class="hl">[Spotlight]</font><br/>
                            Hsin-Ying Lee, Lu Jiang, Irfan Essa, Phuong B Le, Haifeng Gong, Ming-Hsuan Yang, Weilong Yang<br/>
                            ECCV 2020
                            [<a href="https://arxiv.org/abs/1912.09421">pdf</a>]
-                           <br/>
-                           <p/>
-                        </li>
-                        <li>
-                          <b>BLT: Bidirectional Layout Transformer for Controllable Layout Generation</b><br/>
-                           Xiang Kong, Lu Jiang, Huiwen Chang, Han Zhang, Yuan Hao, Haifeng Gong, Irfan Essa<br/>
-                           ECCV 2022
-                           [<a href="https://arxiv.org/abs/2112.05112">pdf</a>], [<a href="https://github.com/google-research/google-research/tree/master/layout-blt">code</a>]
-                           <br/>
-                           <p/>
+                           <br/><p/>
                         </li>
                      </ul>
-                     <!-- ------------------------------------------------------------------------------------
-                          ------------------------------------------------------------------------------------ -->
+                     <!-- ------------------------------------------------------------------------------------------------------------------------------------------------------------------------ -->
                      <hr/>
                      <h3><font class="tag-learning">Robust and Trustworthy Deep Learning</font><br/></h3>
                      <hr/>
@@ -154,25 +203,22 @@
                           <b>Pyramid Adversarial Training Improves ViT Performance</b> <font class="hl">[Oral, Best paper finalist]</font><br/>
                            Charles Herrmann*, Kyle Sargent*, Lu Jiang, Ramin Zabih, Huiwen Chang, Ce Liu, Dilip Krishnan, Deqing Sun<br/>
                            CVPR 2022 (*equal contribution)
-                           [<a href="https://arxiv.org/abs/2111.15121">pdf</a>], [<a href="">code coming soon</a>]
-                           <br/>
-                           <p/>
+                           [<a href="https://arxiv.org/abs/2111.15121">pdf</a>]
+                           <br/><p/>
                         </li>
                         <li>
                           <b>Robust Neural Machine Translation with Doubly Adversarial Inputs</b> <font class="hl">[Best paper candidate]</font><br/>
                            Yong Cheng, Lu Jiang, Wolfgang Macherey<br/>
                            ACL 2019 
                            [<a href="https://arxiv.org/abs/1906.02443">pdf</a>], [<a href="https://ai.googleblog.com/2019/07/robust-neural-machine-translation.html">Google AI blog</a>]
-                           <br/>
-                           <p/>
+                           <br/><p/>
                         </li>
                         <li>
                           <b>Beyond Synthetic Noise: Deep Learning on Controlled Noisy Labels</b><br/> 
                            Lu Jiang, Di Huang, Mason Liu, Weilong Yang<br/>
                            ICML 2020
                            [<a href="https://arxiv.org/abs/1911.09781">pdf</a>], [<a href="./resources/icml20_slides.pdf">slides</a>], [<a href="https://www.youtube.com/watch?v=xcPyu_N-mEU">video</a>], [<a href="https://ai.googleblog.com/2020/08/understanding-deep-learning-on.html">Google AI blog</a>], [<a href="https://google.github.io/controlled-noisy-web-labels/index.html">dataset</a>, <a href="https://www.tensorflow.org/datasets/catalog/controlled_noisy_web_labels">tfds</a>], [<a href="https://github.com/google-research/google-research/tree/master/mentormix">code</a>]
-                           <br/>
-                           <p/>
+                           <br/><p/>
                         </li>
                         <li>
                            <b>MentorNet: Learning Data-Driven Curriculum for Very Deep Neural Networks on Corrupted Labels</b><br/>
@@ -186,75 +232,70 @@
                           <b>Confident Learning: Estimating Uncertainty in Dataset Labels</b><br/>
                            Curtis G. Northcutt, Lu Jiang, Isaac L. Chuang<br/>
                            Journal of Artificial Intelligence Research (JAIR) 2021
-                           [<a href="https://arxiv.org/abs/1911.00068">pdf</a>], [<a href="https://pypi.org/project/cleanlab/">code(cleanlab)</a>].
-                           <br/>
-                           <p/>
+                           [<a href="https://arxiv.org/abs/1911.00068">pdf</a>], [<a href="https://pypi.org/project/cleanlab/">code(cleanlab)</a>]
+                           <br/><p/>
                         </li>
                         <li>
                           <b>Regularizing Generative Adversarial Networks under Limited Data</b><br/>
                            Hung-Yu Tseng, Lu Jiang, Ce Liu, Ming-Hsuan Yang, Weilong Yang<br/>
                            CVPR 2021
                            [<a href="https://arxiv.org/abs/2104.03310">pdf</a>], [<a href="https://github.com/google/lecam-gan">code</a>]
-                           <br/>
-                           <p/>
+                           <br/><p/>
                         </li>
-                        <li>
-                          <b>Self-supervised and Supervised Joint Training for Resource-rich Machine Translation</b><br/>
-                           Yong Cheng, Wei Wang, Lu Jiang, Wolfgang Macherey<br/>
-                           ICML 2021
-                           [<a href="https://openreview.net/forum?id=1yDrpckYHnN">pdf</a>], [<a href="https://github.com/tensorflow/lingvo/tree/master/lingvo/tasks/mt/params/xendec">code</a>]
-                           <br/>
-                           <p/>
-                        </li>
-                        <li>
-                          <b>AdvAug: Robust Adversarial Augmentation for Neural Machine Translation</b><br/>
-                           Yong Cheng, Lu Jiang, Wolfgang Macherey, Jacob Eisenstein <br/>
-                           ACL 2020
-                           [<a href="https://arxiv.org/abs/2006.11834">pdf</a>], [<a href="./resources/advaug_acl20.pdf">slides</a>]
-                           <br/>
-                           <p/>
-                        </li>
+                        <!--   
+                           <li>
+                           <b>Self-supervised and Supervised Joint Training for Resource-rich Machine Translation</b><br/>
+                              Yong Cheng, Wei Wang, Lu Jiang, Wolfgang Macherey<br/>
+                              ICML 2021
+                              [<a href="https://openreview.net/forum?id=1yDrpckYHnN">pdf</a>], [<a href="https://github.com/tensorflow/lingvo/tree/master/lingvo/tasks/mt/params/xendec">code</a>]
+                              <br/><p/>
+                           </li>
+                           <li>
+                           <b>AdvAug: Robust Adversarial Augmentation for Neural Machine Translation</b><br/>
+                              Yong Cheng, Lu Jiang, Wolfgang Macherey, Jacob Eisenstein <br/>
+                              ACL 2020
+                              [<a href="https://arxiv.org/abs/2006.11834">pdf</a>], [<a href="./resources/advaug_acl20.pdf">slides</a>]
+                              <br/><p/>
+                           </li>
+                        !-->
                         <li>
                           <b>Faster Meta Update Strategy for Noise-Robust Deep Learning</b> <font class="hl">[Oral]</font><br/>
                            Youjiang Xu, Linchao Zhu, Lu Jiang, Yi Yang<br/>
                            CVPR 2021
                            [<a href="https://arxiv.org/abs/2104.15092">pdf</a>], [<a href="https://github.com/youjiangxu/FaMUS">code</a>]
-                           <br/>
-                           <p/>
+                           <br/><p/>
                         </li>
                         <li>
                           <b>Discrete Representations Strengthen Vision Transformer Robustness</b><br/>
                            Chengzhi Mao, Lu Jiang, Mostafa Dehghani, Carl Vondrick, Rahul Sukthankar, Irfan Essa<br/>
                            ICLR 2022
-                           [<a href="https://arxiv.org/abs/2111.10493">pdf</a>], [<a href="https://github.com/google-research/scenic">code coming soon</a>]
-                           <br/>
-                           <p/>
+                           [<a href="https://arxiv.org/abs/2111.10493">pdf</a>], [<a href="https://github.com/google-research/scenic">code</a>]
+                           <br/><p/>
                         </li>
                         <li>
                           <b>Contrastive Adaptation Network for Single- and Multi-Source Domain Adaptation</b><br/>
                            Guoliang Kang, Lu Jiang, Yunchao Wei, Yi Yang, Alexander G. Hauptmann<br/>
                            IEEE Transactions on Pattern Analysis and Machine Intelligence (TPAMI) 2021
                            [<a href="https://ieeexplore.ieee.org/document/9219132">pdf</a>], [<a href="https://github.com/kgl-prml/Contrastive-Adaptation-Network-for-Unsupervised-Domain-Adaptation">code</a>].
-                           <br/>
-                           <p/>
+                           <br/><p/>
                         </li>
-                        <li>
-                          <b>SimAug: Learning Robust Representations from Simulation for Trajectory Prediction</b></font><br/>
-                           Junwei Liang, Lu Jiang, Alexander Hauptmann<br/>
-                           ECCV 2020
-                           [<a href="https://arxiv.org/abs/2004.02022">pdf</a>], [<a href="https://next.cs.cmu.edu/simaug/">code</a>]
-                           <br/>
-                           <p/>
-                        </li>
-                        <li>
-                           <b>Leveraging Multi-modal Prior Knowledge for Large-scale Concept Learning in Noisy Web Data</b><br/>
-                           Junwei Liang, Lu Jiang, Deyu Meng, Alexander Hauptmann<br/>
-                           ICMR 2017 [<a href="./camera_ready_papers/icmr17.pdf">pdf</a>]<br/>
-                           <p/>
-                        </li>
+                        <!-- 
+                           <li>
+                           <b>SimAug: Learning Robust Representations from Simulation for Trajectory Prediction</b></font><br/>
+                              Junwei Liang, Lu Jiang, Alexander Hauptmann<br/>
+                              ECCV 2020
+                              [<a href="https://arxiv.org/abs/2004.02022">pdf</a>], [<a href="https://next.cs.cmu.edu/simaug/">code</a>]
+                              <br/><p/>
+                           </li>
+                           <li>
+                              <b>Leveraging Multi-modal Prior Knowledge for Large-scale Concept Learning in Noisy Web Data</b><br/>
+                              Junwei Liang, Lu Jiang, Deyu Meng, Alexander Hauptmann<br/>
+                              ICMR 2017 [<a href="./camera_ready_papers/icmr17.pdf">pdf</a>]<br/>
+                              <p/>
+                           </li>
+                        -->
                      </ul>
-                     <!-- ------------------------------------------------------------------------------------
-                          ------------------------------------------------------------------------------------ -->
+                     <!-- ------------------------------------------------------------------------------------------------------------------------------------------------------------------------ -->
                      <hr/>
                      <h3><font class="tag-video">Video or Multimodal Understanding</font><br/></h3>
                      <hr/>
@@ -264,16 +305,14 @@
                            Junwei Liang, Lu Jiang, Juan Carlos Niebles, Alexander Hauptmann, Li Fei-Fei<br/>
                            CVPR 2019 
                            [<a href="https://arxiv.org/abs/1902.03748">pdf</a>], [<a href="https://next.cs.cmu.edu/">code</a>], [<a href="https://www.youtube.com/watch?v=NyrGxGoS01U">demo video</a>]
-                           <br/>
-                           <p/>
+                           <br/><p/>
                         </li>
                         <li>
                           <b>The Garden of Forking Paths: Towards Multi-Future Trajectory Prediction</b><br/>
                            Junwei Liang, Lu Jiang, Kevin Murphy, Ting Yu, Alexander Hauptmann <br/>
                            CVPR 2020
                            [<a href="https://arxiv.org/abs/1912.06445">pdf</a>], [<a href="https://next.cs.cmu.edu/multiverse/">code</a>], [<a href="https://medium.com/@junweil/cvpr20-the-garden-of-forking-paths-towards-multi-future-trajectory-prediction-df23221dc9f8">blog post</a>]
-                           <br/>
-                           <p/>
+                           <br/><p/>
                         </li>
                         <li>
                            <b>Composing Text and Image for Image Retrieval - An Empirical Odyssey</b> <font class="hl">[Oral]</font><br/>
@@ -309,8 +348,7 @@
                            Yu Wu, Lu Jiang, Yi Yang<br/>
                            IEEE Transactions on Image Processing 2020 
                            [<a href="https://arxiv.org/pdf/1904.04166.pdf">pdf</a>]
-                           <br/>
-                           <p/>
+                           <br/><p/>
                         </li>
                         <li>
                            <b>Graph Distillation for Action Detection with Privileged Information</b><br/>
@@ -425,7 +463,7 @@
                         <li>
                            <b>Self-paced Learning with Diversity</b><br/>
                            Lu Jiang, Deyu Meng, Shoou-I Yu, Zhenzhong Lan, Shiguang Shan, Alexander Hauptmann<br/>
-                           NIPS 2014, [<a href="./camera_ready_papers/NIPS_2014.pdf">pdf</a>], 
+                           NIPS 2014 (NeurIPS 2014), [<a href="./camera_ready_papers/NIPS_2014.pdf">pdf</a>], 
                            [<a href="./camera_ready_papers/NIPS_2014_supplementary_materials.pdf">supplementary materials</a>], 
                            [<a href="./spld">project page</a>]<br/>
                            <p/>
@@ -444,21 +482,8 @@
                            [<a href="./camera_ready_papers/AAAI_MF_2015_supplementary_materials.pdf">supplementary materials</a>]<br/>
                            <p/>
                         </li>
-                        <li>
-                           <b>Learning to Detect Concepts from Webly-Labeled Video Data.</b><br/>
-                           Junwei Liang, Lu Jiang, Deyu Meng, Alexander Hauptmann<br/>
-                           IJCAI 2016, [<a href="./camera_ready_papers/IJCAI_2016.pdf">pdf</a>], [<a href="https://www.youtube.com/watch?v=3he6VDwYMCQ">demo video</a>]<br/>
-                           <p/>
-                        </li>
-                        <li>
-                           <b>A Self-Paced Multiple-Instance Learning Framework for Co-Saliency Detection</b><br/>
-                           Dingwen Zhang, Deyu Meng, Chao Li, Lu Jiang, Qian Zhao, Junwei Han<br/>
-                           ICCV 2015, [<a href="">pdf</a>]<br/>
-                           <p/>
-                        </li>
                      </ul>
-                     <!-- ------------------------------------------------------------------------------------
-                          ------------------------------------------------------------------------------------ -->
+                     <!-- ------------------------------------------------------------------------------------------------------------------------------------------------------------------------ -->
                      <hr/>
                      <h3>Miscellaneous<br/></h3>
                      <hr/>
@@ -471,28 +496,9 @@
                            <p/>
                         </li>
                         <li>
-                           <b>Viral Video Style: A Closer Look at Viral Videos on YouTube</b><font class="hl"> [Best poster at CMU-LTI SRS14]</font><br/>
-                           Lu Jiang, Yajie Miao, Yi Yang, Zhen-Zhong Lan, Alexander Hauptmann<br/>
-                           ICMR 2014, [<a href="./camera_ready_papers/ICMR2014-Viral.pdf">pdf</a>], 
-                           [<a href="./resources/ViralVideos.pdf">slides</a>], [<a href="https://sites.google.com/site/cmuviralvideos/characteristics">dataset</a>]<br/>
-                           <p/>
-                        </li>
-                        <li>
                            <b>Mining Learning-Dependency between Knowledge Units from Text</b><br/>
                            Jun Liu, Lu Jiang, Zhaohui Wu, Qinghua Zheng, Yanan Qian<br/>
                            The VLDB Journal, 20(3): 335-345, 2011, [<a href="./camera_ready_papers/VLDBJ.pdf">pdf</a>]<br/>
-                           <p/>
-                        </li>
-                        <li>
-                           <b>A Peep at Pornography Web in China</b><br/>
-                           Zhaohui Wu, Lu Jiang, Qinghua Zheng, Zhenhua Tian, Jun Liu, Junzhou Zhao<br/>
-                           Web of Science, 2010 [<a href="./camera_ready_papers/WEBSCI_2010.pdf">pdf</a>]<br/>
-                           <p/>
-                        </li>
-                        <li>
-                           <b>Efficient Deep Crawling using Reinforcement Learning</b><br/>
-                           Lu Jiang, Zhaohui Wu, Qian Feng, Jun Liu, Qinghua Zheng<br/>
-                           PAKDD, 2010 [<a href="./camera_ready_papers/PAKDD_2010.pdf">pdf</a>]<br/>
                            <p/>
                         </li>
                      </ul>

@@ -47,11 +47,12 @@ body {
 	position: relative;
 }
 #wrapper {
- box-shadow: 0 0 5px #666;
- -webkit-box-shadow: 0 0 5px #666;
- -moz-box-shadow: 0 0 5px #666;
- -moz-border-radius:10px;
+	box-shadow: 0 0 5px #666;
+	-webkit-box-shadow: 0 0 5px #666;
+	-moz-box-shadow: 0 0 5px #666;
+	-moz-border-radius:10px;
 	-webkit-border-radius:10px;
+	border-radius: 10px;
 	margin:5px 0;
 	overflow:hidden;
 }	
@@ -298,4 +299,16 @@ div.quickLink > .block{
   overflow: hidden;
   transition: max-height 0.2s ease-out;
   background-color: white;
+}
+
+/* publication page  */
+.diagram-title {
+	text-align: center;
+	margin: 20px 0;
+}
+.smaller-title {
+	font-size: 0.5em; /* 1.5 times the size of the current font */
+}
+.smaller-author {
+	font-size: 0.8em;
 }
